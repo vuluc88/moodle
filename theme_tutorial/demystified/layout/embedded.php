@@ -15,14 +15,33 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'theme_base', language 'en', branch 'MOODLE_20_STABLE'
+ * The embedded layout for the base theme.
  *
  * @package   theme_base
  * @copyright 1999 onwards Martin Dougiamas  {@link http://moodle.com}
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['pluginname'] = 'Excitement';
-$string['region-side-post'] = 'Right';
-$string['region-side-pre'] = 'Left';
-$string['choosereadme'] = 'My first theme tutorial';
+echo $OUTPUT->doctype(); ?>
+<html <?php echo $OUTPUT->htmlattributes() ?>>
+<head>
+    <title><?php echo $PAGE->title ?></title>
+    <link rel="shortcut icon" href="<?php echo $OUTPUT->pix_url('favicon', 'theme')?>" />
+    <?php echo $OUTPUT->standard_head_html() ?>
+</head>
+<body id="<?php p($PAGE->bodyid) ?>" class="<?php p($PAGE->bodyclasses) ?>">
+<?php echo $OUTPUT->standard_top_of_body_html() ?>
+
+<div id="page">
+
+<!-- END OF HEADER -->
+
+    <div id="page-content" class="clearfix">
+        <?php echo $OUTPUT->main_content() ?>
+    </div>
+
+<!-- START OF FOOTER -->
+</div>
+<?php echo $OUTPUT->standard_end_of_body_html() ?>
+</body>
+</html>

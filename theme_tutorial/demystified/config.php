@@ -1,7 +1,7 @@
 <?php
-$THEME->name = 'excitement';
+$THEME->name = 'demystified';
 $THEME->parents = array('base');
-$THEME->sheets = array('excitement');
+$THEME->sheets = array('core');
 
 $THEME->layouts = array(
     // Most backwards compatible layout without the blocks - this is the layout used by default
